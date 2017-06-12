@@ -1,0 +1,24 @@
+{
+  "name": "UpdateVMSOrderStatus",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "test": "./node_modules/.bin/webpack && ./node_modules/.bin/jasmine",
+    "push": "./node_modules/.bin/webpack && ./node_modules/.bin/jasmine && zip -j -r component.zip build/* && (aws lambda create-function --function-name UpdateVMSOrderStatus --runtime nodejs6.10 --role arn:aws:iam::502012872423:role/lambda_basic_execution --handler component.process --zip-file fileb://./component.zip 2> /dev/null || aws lambda update-function-code --function-name UpdateVMSOrderStatus --zip-file fileb://./component.zip) && rm component.zip"
+  },
+  "devDependencies": {
+    "babel-core": "6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.47.0",
+    "jasmine": "^2.6.0",
+    "nock": "^9.0.13",
+    "webpack": "2.4.1"
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.1"
+  }
+}

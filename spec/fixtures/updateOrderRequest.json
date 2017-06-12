@@ -1,0 +1,9 @@
+{
+  "data": {
+    "id": "123",
+    "type": "orders",
+    "attributes": {
+      "dms-status": "In transit"
+    }
+  }
+}

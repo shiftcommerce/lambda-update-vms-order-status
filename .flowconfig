@@ -1,0 +1,9 @@
+[ignore]
+# Don't check nock, it contains a broken file
+.*/node_modules/nock/*
+
+[include]
+
+[libs]
+
+[options]

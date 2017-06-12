@@ -1,0 +1,30 @@
+{
+  "ConsignmentReference": "EC-000-00A-K9G",
+  "ConsignmentReferenceProvidedByCustomer": "MATDIR12345",
+  "ConsignmentTrackingReference": "JD0002234001000062",
+  "ConsignmentState": "InTransit",
+  "Packages": [
+    {
+      "Reference": "EP-000-00F-87T",
+      "TrackingDetails": [
+        {
+          "Leg": 1,
+          "TrackingReference": "JD0002234001000063"
+        }
+      ]
+    }
+  ],
+  "ConsignmentLegs": [
+   {
+      "Leg": 1,
+      "TrackingReference": "JD0002234001000063",
+      "CarrierReference": "YDL",
+      "CarrierName": "YDL"
+    }
+  ],
+  "CarrierServiceReference": "MPD_DPDND",
+  "CarrierServiceName": "DPD Next Day",
+  "EarliestDeliveryDate": "2016-11-05T00:00:00+00:00",
+  "LatestDeliveryDate": "2016-11-05T23:59:00+00:00",
+  "DateDelivered": null
+}

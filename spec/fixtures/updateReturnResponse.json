@@ -1,0 +1,13 @@
+{
+  "data": {
+    "id": "51",
+    "type": "returns",
+    "links": {
+      "self": "http://localhost:5200/api/v1/admin/returns/51"
+    },
+    "attributes": {
+      "dms-reference": "EC-000-00A-K9G",
+      "dms-status": "In transit"
+    }
+  }
+}

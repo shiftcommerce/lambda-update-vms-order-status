@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "id": "123",
+      "type": "orders",
+      "links": {
+        "self": "https://vendors-staging.herokuapp.com/api/v1/orders/1"
+      },
+      "attributes": {
+        "reference": "MATDIR12345",
+        "remote-id": "1234567123",
+        "created-at": "2016-06-13T14:22:52.406+01:00",
+        "updated-at": "2016-11-09T13:22:22.194+00:00",
+        "placed-at": "2016-06-08T14:22:52.383+01:00",
+        "fraudulent-order": false,
+        "despatched-at": null,
+        "cancelled-at": null,
+        "company": null,
+        "first-name": null,
+        "last-name": null,
+        "address-line-1": null,
+        "address-line-2": null,
+        "city": null,
+        "country-code": null,
+        "postcode": null,
+        "phone": null,
+        "email": null,
+        "consignment-reference": "EC-000-00A-K9G",
+        "dms-status": "Not received"
+      },
+      "relationships": {
+        "sub-orders": {
+          "links": {
+            "self": "https://vendors-staging.herokuapp.com/api/v1/orders/1/relationships/sub-orders",
+            "related": "https://vendors-staging.herokuapp.com/api/v1/orders/1/sub-orders"
+          }
+        }
+      }
+    }
+  ],
+  "links": {
+    "first": "https://vendors-staging.herokuapp.com/api/v1/orders?filter%5Bconsignment_reference%5D=EC-000-000-TEST1&page%5Blimit%5D=20&page%5Boffset%5D=0",
+    "last": "https://vendors-staging.herokuapp.com/api/v1/orders?filter%5Bconsignment_reference%5D=EC-000-000-TEST1&page%5Blimit%5D=20&page%5Boffset%5D=0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": "51",
+      "type": "returns",
+      "links": {
+        "self": "http://localhost:5200/api/v1/admin/returns/51"
+      },
+      "attributes": {
+        "dms-reference": "EC-000-00A-K9G",
+        "dms-status": "Not received"
+      }
+    }
+  ],
+  "links": {
+    "first": "http://localhost:5200/api/v1/admin/returns?filter%5Bdms_reference%5D=EC-000-000-TEST1&page%5Blimit%5D=20&page%5Boffset%5D=0",
+    "last": "http://localhost:5200/api/v1/admin/returns?filter%5Bdms_reference%5D=EC-000-000-TEST1&page%5Blimit%5D=20&page%5Boffset%5D=0"
+  }
+}
