@@ -42,12 +42,12 @@ exports.process = async (event: DMSWebhook, context: {}, callback: (Error | null
     })
 
     if (orderResponse.status != 200) {
-      callback(new Error(`Filtering orders by consignment reference failed. VMS responded with status ${orderResponse.status}: ${orderResponse}`))
+      callback(new Error(`Filtering orders by consignment reference failed. VMS responded with status ${orderResponse.status}: ${JSON.stringify(orderResponse)}`))
       return
     } 
     
     if (returnResponse.status != 200) {
-      callback(new Error(`Filtering returns by consignment reference failed. VMS responded with status ${returnResponse.status}: ${returnResponse}`))
+      callback(new Error(`Filtering returns by consignment reference failed. VMS responded with status ${returnResponse.status}: ${JSON.stringify(returnResponse)}`))
       return
     }
 
@@ -85,7 +85,7 @@ exports.process = async (event: DMSWebhook, context: {}, callback: (Error | null
       })
 
       if (response.status != 200) {
-        throw new Error(`Updating order status failed. VMS responded with status ${response.status}: ${response}`)
+        throw new Error(`Updating order status failed. VMS responded with status ${response.status}: ${JSON.stringify(response)}`)
       } else {
         return response.json()
       }
