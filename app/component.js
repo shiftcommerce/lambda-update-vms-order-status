@@ -9,8 +9,9 @@ type DMSWebhook = {
 
 // AWS Lambda will call this method
 exports.process = async (event: DMSWebhook, context: {}, callback: (Error | null, any) => void) => {
-
   try { 
+    console.log(`Received data: ${JSON.stringify(event)}`)
+
     if (!process.env.VMS_API_KEY) throw new Error('VMS_API_KEY is missing')
     const authenticationHeaders = {
       'Content-Type': 'application/vnd.api+json',
@@ -58,6 +59,7 @@ exports.process = async (event: DMSWebhook, context: {}, callback: (Error | null
     const updateOrderResponse = await updateOrder(orderResponseJson)
     const updateReturnResponse = await updateReturn(returnResponseJson)
 
+    console.log(`Returning data: ${JSON.stringify(updateOrderResponse)}`)
     callback(null, updateOrderResponse)
   
     async function updateOrder (json) {

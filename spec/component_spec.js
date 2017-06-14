@@ -5,7 +5,7 @@ const nock = require('nock')
 
 nock.disableNetConnect()
 
-// console.log = () => {}
+console.log = () => {}
 
 // fixtures
 const input = require('./fixtures/input.json')
