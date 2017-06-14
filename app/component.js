@@ -11,10 +11,11 @@ type DMSWebhook = {
 exports.process = async (event: DMSWebhook, context: {}, callback: (Error | null, any) => void) => {
 
   try { 
+    if (!process.env.VMS_API_KEY) throw new Error('VMS_API_KEY is missing')
     const authenticationHeaders = {
       'Content-Type': 'application/vnd.api+json',
       'Accept': 'application/vnd.api+json',
-      'X-Auth-Token': process.env.API_KEY
+      'X-Auth-Token': process.env.VMS_API_KEY
     }
 
     const consignmentReference = event.ConsignmentReference;
