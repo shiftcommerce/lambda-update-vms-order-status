@@ -39,7 +39,7 @@ exports.process = async (event: DMSWebhook, context: {}, callback: (Error | null
 
     if (!process.env.VMS_HOST) throw new Error('VMS_HOST is missing')
     const returnResponse = await fetch(`${process.env.VMS_HOST}/api/v1/admin/returns?filter[dms_reference]=${consignmentReference}`, {
-      header: authenticationHeaders
+      headers: authenticationHeaders
     })
 
     if (orderResponse.status != 200) {
